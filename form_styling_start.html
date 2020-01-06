@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Styling</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style2.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-wrap">
+        <h1>Sign Up</h1>
+        <p>It's free and only takes a minute</p>
+        <form id="form" method="post" name="myform" onsubmit="return validate();">
+          <div id="first-name">
+            <label for="first-name" class="required">First Name</label><br>
+            <input type="text" name="firstName" id="firstname" onkeyup="validateFirstName(this)" size="40"><span id="fnamemessage"></span>
+            <div id="firstName" class="remove"></div>
+          </div>
+          <div id="last-name">
+            <label for="last-name">Last Name</label><br>
+            <input type="text" name="lastName" id="lastname" onkeyup="validateLastName(this)" size="40" >
+            <span id="lnamemessage"></span>
+            <div id="lastName" class="remove"></div>
+          </div>
+          <div id="email">
+            <label for="email" class="required">Email</label><br>
+            <input type="email" name="email" id="emailId" onkeyup="validateEmail(this)" size="40">
+            <span id="emailmessage"></span>
+            <div id="Email" class="remove"></div>
+          </div>
+          <div id="contact">
+            <label for="contact" class="required">Contact No.</label><br>
+            <input type="text" name="contact" id="contactno" onkeyup="validateContact(this)" size="40">
+            <span id="contactmessage"></span>
+            <div id="Contact" class="remove"></div>
+          </div>
+          <div id="password">
+            <label for="password" class="required">Password</label><br>
+            <input type="password" name="password" id="pwd" onkeyup="validatePassword(this)" size="40">
+            <span id="passwordmessage"></span>
+            <div id="Password" class="remove"></div>
+          </div><br>
+         <label>Region</label>
+        <select required="required" id="dropdown" onchange="dropdownfunction()">
+          <option value="" name="Select">Select</option>
+          <option>India</option>
+          <option>Australia</option>
+          <option>Canada</option>
+        </select>
+        <span id="output">
+          <!-- resultant tobeadded here -->
+        </span>
+        <span id="output2">
+          <!-- resultant tobeadded here -->
+        </span>
+        <label id="dropdownmessage"></label>
+        <br><br>
+        <input type="submit" value="Submit" class="btn btn-primary" id="submit">
+        <!-- <input type="reset" name=""> -->
+        <p class="bottom-text">
+          By clicking the Sign Up button, you agree to our
+          <a href="#">Terms & Conditions</a> and
+          <a href="#">Privacy Policy</a>
+        </p>
+        <p id="usercreate" style="font-family: monospace;">Please create new user</p>
+      </form>
+    <table id="table" border="1" class="calculator">
+      <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>ContactNo.</th>
+        <!-- <th>&#10005;</th>
+        <th>Edit</th> -->
+        <th>Action</th>
+        <th>City</th>
+      </tr>
+      <!-- <tr id='data'>
+        <td id="ID"></td>
+        <td id="fname"></td>
+        <td id="lname"></td>
+        <td id="mailid"></td>
+        <td id="phoneno"></td>
+        <td></td>
+        // <td id="delete"></td>
+        <td id="edit"></td>
+        <td id="city"></td>
+      </tr>  -->
+    </table>
+    </div>
+      <footer>
+        <p>Already have an account? <a href="#">Login Here</a></p>
+        <p class="colorpicker">Pick Your color:           
+          <input type="color" id="colorpick" name="colorpicker">
+          <!-- <input type="submit" class="submitbtn" value="submit" onclick="colorPicker();"><br><br> -->
+          <input type="submit" class="submitbtn" name="" value="Refresh" onclick="reloadPage();">
+        </p>
+      </footer>
+    </div>
+    <script src="formJs.js"></script>
+  </body>
+</html>
