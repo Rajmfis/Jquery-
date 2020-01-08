@@ -1,6 +1,8 @@
 //id of everyuser, keeps varying on deletion  
 var id = 1;
 var bool;
+var delId;
+var oldId;
 var city;//picking the city input from the dropdown
 var todelete;//holds the row to be deleted
 
@@ -17,17 +19,19 @@ const inputlname=$('#lastname');
 const inputemailid=$('#emailId');
 const inputcontactno=$('#contactno');
 
-//validate is called on submitting the form
+
+//validate is called on submitting the form gb b     
 function validate(){//the function validates all the input fields 
 	
 	if(id===1){
 		$('#usercreate').text('Please create new users');
 	}
-	var inputEmail = document.myform.email.value;//picking the email field value   
-	var phone = document.myform.contact.value;
-	var firstname = document.myform.firstName.value;
-	var lastname = document.myform.lastName.value;
-	var password = document.myform.password.value;
+
+	var inputEmail = $('#emailId').val();//picking the email field value   
+	var phone = $('#contactno').val();
+	var firstname = $('#firstname').val();
+	var lastname = $('#lastname').val();
+	var password = $('#pwd').val();
 	var allValue = true;
 	var regexEmailPattern = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,10}).([a-z]{2,10}?)$/;
 	var regexPhonePattern = /^([0-9]{10,11})$/;
@@ -116,18 +120,22 @@ function resetForm() {//the method is called from validate, when all the records
 function createTable(firstname, lastname, inputEmail, phone) {
 	//it is used to create table row and columns everytime when the user submits the details in the form
 	var mytable = $('table');
+	oldId=id;
 	//the block checks if there is any row to delete
 	if(bool===true && todelete!==undefined){
-		$(this).closest("tr").remove();
+		$('table tr:eq('+todelete+')').remove();
 		bool=false;
 		todelete=undefined;
+		id=delId;
 	}
+	console.log(id);
 	var row='<tr id=\'data\'><td>'+(id)+'</td><td>'+
 					firstname+'</td><td>'+lastname+'</td><td>'+inputEmail+'</td><td>'+phone+'</td><td>'+'<button onclick="deleteUser(this);">&#10005</button><button onclick="editUser(this);">Edit</button>'+'</td><td>'+city+'</td></tr>';
 	mytable.append(row);//append method is used with jquery for table
 	$('#submit').val('Submit');
 	$('#usercreate').text('');
-	id++;
+	id=oldId+1;
+	console.log("exiting the createtable "+id );
 }
 //called when the user clicks the delete button, it deletes the user from the table
 function deleteUser(element) {
@@ -136,7 +144,7 @@ function deleteUser(element) {
 	if (val === true) {
 		alert('deleting the user'+element.parentNode.parentNode.rowIndex);
 		$('table tr:eq('+element.parentNode.parentNode.rowIndex+')').remove();
-		id--;
+		// id--;
 		if(id===1){
 			$('#usercreate').text('Please create new users');
 		}
@@ -148,7 +156,7 @@ function deleteUser(element) {
 //editUser accepts the current object passed as this which will be used 
 //to track current user
 function editUser(user) {
-	debugger;
+	// debugger;
 	if(document.myform.firstName.value!=='' && document.myform.lastName.value!==''){
 		var clear=confirm('Your entered will be cleared. Do you want to continue');
 		if(clear===false){//scenario when form is dirty, so if it doesn't want to override values we simply return
@@ -164,17 +172,19 @@ function editUser(user) {
 	}
 
 	
-	var currentRow=$(this).closest("tr"); 
-	var col1=currentRow.find("table td:eq(0)").text(); 						// get current row 1st  cell TD value
-	var col2=$(this).find("td:eq(1)").text(); // get current row 2nd  cell TD value
-	var col3=$(this).parents("tr").find("td:eq(2)").text(); // get current row 3rd  cell  TD value
-	var col4=$(this).parents("tr").find("td:eq(3)").text(); // get current row 4th  cell TD value
-	var col5=$(this).parents("tr").find("td:eq(4)").text(); // get current row 5th  cell TD value
-	var col6=$(this).parents("tr").find("td:eq(5)").text(); // get current row 6th  cell  TD value
-	var data=col1+"\n"+col2+"\n"+col3;
+	// var currentRow=$(this).closest("tr"); 			
+	// get current row 1st  cell TD value
+	// alert($(user).parents("tr")[0].rowIndex);//understand this man
+	todelete=$(user).parents("tr")[0].rowIndex;
+	delId=$(user).parents("tr")[0].cells[0].innerText;
+	var col2=$(user).parents("tr")[0].cells[1].innerText; // get current row 2nd  cell TD value
+	// console.log(col2);
+	var col3=$(user).parents("tr")[0].cells[2].innerText; // get current row 3rd  cell  TD value
+	var col4=$(user).parents("tr")[0].cells[3].innerText; // get current row 4th  cell TD value
+	var col5=$(user).parents("tr")[0].cells[4].innerText; // get current row 5th  cell TD value
+	// var col6=$(user).parents("tr")[0].cells[5].innerText; // get current row 6th  cell  TD value
+	// var data=col1+"\n"+col2+"\n"+col3;
 	
-	alert(data);
-
 	// var mytable = $('#table');
 	// var id = mytable.rows[user.parentNode.parentNode.rowIndex].cells[0].text();
 	// alert(id);
@@ -188,7 +198,7 @@ function editUser(user) {
 	$('#contactno').val(col5);
 	$('#pwd').val("**********");
 	$('#dropdown').val("");
-	todelete = user.parentNode.parentNode.rowIndex;
+	// todelete = user.parentNode.parentNode.rowIndex;
 	bool=true;
 	scrollToTop();
 }
