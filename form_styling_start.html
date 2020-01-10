@@ -41,7 +41,8 @@
           </div>
           <div id="password">
             <label for="password" class="required">Password</label><br>
-            <input type="password" name="password" id="pwd" onkeyup="validatePassword(this)" size="40">
+            <input type="password" name="password" id="pwd"  size="40">
+            <!-- onkeyup="validatePassword(this)" -->
             <span id="passwordmessage"></span>
             <div id="Password" class="remove"></div>
           </div><br>
@@ -76,22 +77,9 @@
         <th>LastName</th>
         <th>Email</th>
         <th>ContactNo.</th>
-        <!-- <th>&#10005;</th>
-        <th>Edit</th> -->
         <th>Action</th>
         <th>City</th>
       </tr>
-      <!-- <tr id='data'>
-        <td id="ID"></td>
-        <td id="fname"></td>
-        <td id="lname"></td>
-        <td id="mailid"></td>
-        <td id="phoneno"></td>
-        <td></td>
-        // <td id="delete"></td>
-        <td id="edit"></td>
-        <td id="city"></td>
-      </tr>  -->
     </table>
     </div>
       <footer>
@@ -104,6 +92,7 @@
       </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="globalvariables.js"></script>"
     <script src="formJs.js"></script>
   </body>
 </html>
