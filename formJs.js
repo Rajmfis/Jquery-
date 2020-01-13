@@ -1,79 +1,76 @@
 //validate is called on submitting the form
-function validate() { //the function validates all the input fields
+$('document').ready(function(){
+	 //the function validates the email fields
+	jQuery.validator.addMethod("customEmail", function(value, element) { 
+		return this.optional( element ) || /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test( value ); 
+	}, "Please enter valid email address!");
+	jQuery.validator.addMethod("phone", function(value, element) { 
+		return this.optional( element ) || /^([0-9]{10,11})+$/.test( value ); 
+	}, "Please enter valid phone number!");
 
-	if (id === 1) {
-	 $("#usercreate").text("Please create new users");
-	}
- 
-	var inputEmail = $("#emailId").val(); //picking the email field value
-	var phone = $("#contactno").val();
-	var firstname = $("#firstname").val();
-	var lastname = $("#lastname").val();
-	var password = $("#pwd").val();
-	var allValue = true;
-	var checkEmail = regexEmailPattern.test(inputEmail);
-	var checkPhone = regexPhonePattern.test(phone);
- 
-	if (firstname === "") {
-	 // alert("hi js tested");
-	 divfname.html("Please fill the firstName field");
-	 divfname.css("color", "red");
-	 allValue = false;
-	}
-	if (lastname === "") {
-	 divlname.html("Please fill the lastName field");
-	 divlname.css("color", "red");
-	 allValue = false;
-	}
-	if (inputEmail === "") {
-	 divmail.html("Please fill the inputEmail field");
-	 divmail.css("color", "red");
-	 allValue = false;
-	}
-	if (phone === "") {
-	 divcontact.html("Please fill the phone field");
-	 divcontact.css("color", "red");
-	 allValue = false;
-	}
-	if (password === "") {
-	 divpwd.html("Please fill the password field");
-	 divpwd.css("color", "red");
-	 allValue = false;
-	}
- 
-	if (allValue === false) {
-	 return false;
-	}
- 
-	if (checkPhone && allValue) {
-	 if (checkEmail) {
-		divpwd.text("");
-		divmail.text("");
-		divlname.text("");
-		divfname.text("");
-		divcontact.text("");
+	var registerForm=$("#form");
+	// if(firstname&&lastname&&password&&inputEmail&&phone){
+  	registerForm.validate({
+      rules:{
+					firstName: {
+            required: true,
+					},
+					lastName: {
+						required: true,
+					},
+          email: {
+							required: true,
+							customEmail: true
+					},
+					contact: {
+						required: true,
+						phone:true
+					},
+          password: {
+              required: true
+					},
+					region:{
+						required: true
+					},
+      },
+      messages:{
+				firstName: {
+					required: 'Please enter first name!'
+				},
+				lastName: {
+					required: 'Please enter last name!'
+				},
+        username: {
+          required: 'Please enter username!'
+        },
+        email: {
+          required: 'Please enter email!',
+          email: 'Please enter valid email!'
+      	},
+        password: {
+          required: 'Please enter password!'
+        },
+				region:{
+					required: "Please select an option from the list",
+				},
+			}
+			});
+			$('#form').on('submit',(function () {
+				var inputEmail = $("#emailId").val(); //picking the email field value
+				var phone = $("#contactno").val();
+				var firstname = $("#firstname").val();
+				var lastname = $("#lastname").val();
+				var password = $("#pwd").val();
+		
+	// alert(inputEmail+phone+firstname+lastname+password);
+	if(inputEmail&&phone&&firstname&&lastname&&password){
 		createTable(firstname, lastname, inputEmail, phone);
 		resetForm();
 		return false;
-	 }
-	}
-	if (checkEmail === false && checkPhone === false) {
-	 divcontact.html("Entered Contact no is wrong");
-	 divmail.html("Entered Email id is wrong ");
-	 divcontact.css("color", "red");
-	 divmail.css("color", "red");
-	 return false;
-	} else if (checkEmail === true && checkPhone === false) {
-	 divcontact.html("Entered contact no is wrong");
-	 divcontact.css("color", "red");
-	 return false;
-	} else {
-	 divmail.html("Entered email is incorrect");
-	 divmail.css("color", "red");
-	 return false;
-	}
- }
- 
+		}
+	}))
+	})
+
  $("#colorpick").change(function() {
 	$("body").css("background-color", $("#colorpick").val());
  });
@@ -106,12 +103,14 @@ function validate() { //the function validates all the input fields
 	 todelete = undefined;
 	 id = delId;
 	}
+	
 	var row = "<tr id=\"data\"><td>" + (id) + "</td><td>" +
 	 firstname + "</td><td>" + lastname + "</td><td>" + inputEmail + "</td><td>" + phone + "</td><td>" + "<button onclick=\"deleteUser(this);\">&#10005</button><button onclick=\"editUser(this);\">Edit</button>" + "</td><td>" + city + "</td></tr>";
 	mytable.append(row); //append method is used with jquery for table
 	$("#submit").val("Submit");
 	$("#usercreate").text("");
 	id = oldId + 1;
+	
  }
  //called when the user clicks the delete button, it deletes the user from the table
  function deleteUser(element) {
@@ -268,6 +267,33 @@ function validate() { //the function validates all the input fields
 	city = element.value;
  }
  
+ function loadDefaultUserData() {
+ 
+	const xhr = new XMLHttpRequest();
+ 
+	xhr.open("GET", "users.json", true);
+ 
+	xhr.onload = function() {
+	 if (this.status === 200) {
+		// console.log(this.responseText);
+		const userDetails = JSON.parse(this.responseText);
+		var randomUserIndex = Math.floor(Math.random() * 3);
+		// alert(userDetails[randomUserIndex].FirstName);
+		//passing the values we got from the json and
+		//storing into the html table instead of putting into the form
+		city = userDetails[randomUserIndex].City;
+		createTable(userDetails[randomUserIndex].FirstName,
+		 userDetails[randomUserIndex].LastName,
+		 userDetails[randomUserIndex].Email, userDetails[randomUserIndex].ContactNo,
+		 userDetails[randomUserIndex].Pwd);
+		//can"t keep dropdown values explitcitly
+		//as on selection of one other generates so can"t be kept
+		//as first only is not there
+	 }
+	}
+	xhr.send();
+ }
+
  function reloadPage() {
 	window.location.reload();
  }

@@ -1,6 +1,9 @@
 *{
   font-family: Raleway;
 }
+.error:not(#dropdown) {/*excluding the id dropdown from coloring it as red*/
+  color: red;
+}
 body {
   background-color: #344a72;
 }

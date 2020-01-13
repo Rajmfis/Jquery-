@@ -15,39 +15,39 @@
       <div class="form-wrap">
         <h1>Sign Up</h1>
         <p>It's free and only takes a minute</p>
-        <form id="form" method="post" name="myform" onsubmit="return validate();">
+        <form id="form" method="post" name="myform">
           <div id="first-name">
             <label for="first-name" class="required">First Name</label><br>
-            <input type="text" name="firstName" id="firstname" onkeyup="validateFirstName(this)" size="40"><span id="fnamemessage"></span>
+            <input type="text" name="firstName" id="firstname"  size="40"><span id="fnamemessage"></span>
             <div id="firstName" class="remove"></div>
           </div>
           <div id="last-name">
             <label for="last-name">Last Name</label><br>
-            <input type="text" name="lastName" id="lastname" onkeyup="validateLastName(this)" size="40" >
+            <input type="text" name="lastName" id="lastname" size="40" >
             <span id="lnamemessage"></span>
             <div id="lastName" class="remove"></div>
           </div>
           <div id="email">
             <label for="email" class="required">Email</label><br>
-            <input type="email" name="email" id="emailId" onkeyup="validateEmail(this)" size="40">
+            <input type="text" name="email" id="emailId" size="40">
             <span id="emailmessage"></span>
             <div id="Email" class="remove"></div>
           </div>
           <div id="contact">
             <label for="contact" class="required">Contact No.</label><br>
-            <input type="text" name="contact" id="contactno" onkeyup="validateContact(this)" size="40">
+            <input type="text" name="contact" id="contactno" size="40">
             <span id="contactmessage"></span>
             <div id="Contact" class="remove"></div>
           </div>
           <div id="password">
             <label for="password" class="required">Password</label><br>
-            <input type="password" name="password" id="pwd"  size="40">
+            <input type="password" name="password" id="pwd" size="40">
             <!-- onkeyup="validatePassword(this)" -->
             <span id="passwordmessage"></span>
             <div id="Password" class="remove"></div>
           </div><br>
          <label>Region</label>
-        <select required="required" id="dropdown" onchange="dropdownfunction()">
+        <select name="region" id="dropdown" onchange="dropdownfunction()">
           <option value="" name="Select">Select</option>
           <option>India</option>
           <option>Australia</option>
@@ -62,6 +62,7 @@
         <label id="dropdownmessage"></label>
         <br><br>
         <input type="submit" value="Submit" class="btn btn-primary" id="submit">
+        <input type="button" value="loadDefaultUserData" class="btn btn-primary" onclick="loadDefaultUserData()">
         <!-- <input type="reset" name=""> -->
         <p class="bottom-text">
           By clicking the Sign Up button, you agree to our
@@ -90,9 +91,10 @@
           <input type="submit" class="submitbtn" name="" value="Refresh" onclick="reloadPage();">
         </p>
       </footer>
-    </div>
+    </div>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="globalvariables.js"></script>"
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="globalvariables.js"></script>
     <script src="formJs.js"></script>
   </body>
 </html>
