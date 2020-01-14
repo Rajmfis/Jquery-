@@ -41,6 +41,7 @@ table th {
 table td {
   word-break: break-all;
   text-align: center;
+  width: 30%;
 }
 .form-wrap {
   background-color: white;

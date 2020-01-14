@@ -5,6 +5,8 @@
   "Email":"re@gmail.com",
   "ContactNo":7983037738,
   "Pwd":"**********",
+  "Country":"India",
+  "State":"Maharashtra",
   "City":"pawai"
   },
   {
@@ -13,6 +15,8 @@
     "Email":"doe@gmail.com",
     "ContactNo":9056037738,
     "Pwd":"**********",
+    "Country":"India",
+    "State":"Delhi",
     "City":"South-Delhi"
     },
     {
@@ -21,6 +25,8 @@
       "Email":"brad@gmail.com",
       "ContactNo":4556037738,
       "Pwd":"**********",
+      "Country":"India",
+      "State":"Delhi",
       "City":"Noida"
       }
 ]

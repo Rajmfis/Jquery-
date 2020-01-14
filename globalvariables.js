@@ -22,3 +22,9 @@ const inputcontactno=$('#contactno');
 //regex code
 var regexEmailPattern = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,10}).([a-z]{2,10}?)$/;
 var regexPhonePattern = /^([0-9]{10,11})$/;
+
+//maintaining javascript object for storing objects
+var dropdown=[];
+var obj={};
+var username;
+var map = new Map();

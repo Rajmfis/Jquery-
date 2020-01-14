@@ -7,6 +7,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style2.css"> 
        
   </head>
@@ -62,7 +63,7 @@
         <label id="dropdownmessage"></label>
         <br><br>
         <input type="submit" value="Submit" class="btn btn-primary" id="submit">
-        <input type="button" value="loadDefaultUserData" class="btn btn-primary" onclick="loadDefaultUserData()">
+        <input type="button" value="LoadDefaultUserData" class="btn btn-primary" onclick="loadDefaultUserData()">
         <!-- <input type="reset" name=""> -->
         <p class="bottom-text">
           By clicking the Sign Up button, you agree to our
@@ -71,15 +72,15 @@
         </p>
         <p id="usercreate" style="font-family: monospace;">Please create new user</p>
       </form>
-    <table id="table" border="1" class="users-detail">
+    <table id="table" border="2" class="users-detail">
       <tr>
         <th>ID</th>
         <th>FirstName</th>
         <th>LastName</th>
         <th>Email</th>
         <th>ContactNo.</th>
-        <th>Action</th>
         <th>City</th>
+        <th>Action</th>
       </tr>
     </table>
     </div>
@@ -94,6 +95,7 @@
     </div>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="globalvariables.js"></script>
     <script src="formJs.js"></script>
   </body>
