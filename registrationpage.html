@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Coupon Website</title>
+	<link rel="stylesheet" type="text/css" href="registrationformstyling.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #68a5d1;">
+		<!-- <nav class="navbar  navbar-light bg-light" > --> <a class="navbar-brand" href="#">Grab Coupon</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"> <a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item"> <a class="nav-link" data-toggle="modal" data-target="#myModal" href="#">Pricing</a> 
+					<!-- The Modal -->
+					<div class="modal" id="myModal">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<!-- Modal Header -->
+								<div class="modal-header">
+									<h4 class="modal-title">Pricing</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>
+								<!-- Modal body -->
+								<div class="modal-body">We will very soon come up with the <strong>10</strong><i class="fas fa-dollar-sign"> </i> pricing offer. As if now you can subscribe freely</i>
+								</div>
+								<!-- Modal footer -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item active"> <a class="nav-link" href="#">Subscription</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-sm" id="container">
+		<form id="form" method="post" name="myform">
+			<div class="form-row">
+				<div class="form-group col-lg-12">	<span class="text-center"> 
+					<h4>Subscribe and Never Miss any Coupon</h4>
+					<p>It's free and only takes a minute</p>
+				</span>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-lg-12">
+					<div id="first-name">
+						<label for="first-name" class="required font-weight-bold">First Name</label>
+						<br>
+						<input type="text" class="form-control" name="firstName" id="firstname" size="40"><span id="fnamemessage"></span>
+						<div id="firstName" class="remove"></div>
+					</div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-lg-12">
+					<div id="last-name">
+						<label for="last-name" class="font-weight-bold">Last Name</label>
+						<br>
+						<input type="text" class="form-control" name="lastName" id="lastname" size="40"> <span id="lnamemessage"></span>
+						<div id="lastName" class="remove"></div>
+					</div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-lg-12">
+					<div id="email">
+						<label for="email" class="required font-weight-bold">Email</label>
+						<br>
+						<input type="text" class="form-control" name="email" id="emailId" size="40"> <span id="emailmessage"></span>
+						<div id="Email" class="remove"></div>
+					</div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-lg-12">
+					<div id="contact">
+						<label for="contact" class="required font-weight-bold">Contact No.</label>
+						<br>
+						<input type="text" class="form-control" name="contact" id="contactno" size="40"> <span id="contactmessage"></span>
+						<div id="Contact" class="remove"></div>
+					</div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-lg-12">
+					<div id="password">
+						<label for="password" class="required font-weight-bold">Password</label>
+						<br>
+						<input type="password" class="form-control" name="password" id="pwd" size="40">
+						<!-- onkeyup="validatePassword(this)" --> <span id="passwordmessage"></span>
+						<div id="Password" class="remove"></div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<label class="font-weight-bold">Region</label>
+			<select class="custom-select" name="region" class="dropdown" id="dropdown" onchange="dropdownfunction()">
+				<option value="" name="Select">Select</option>
+				<option>India</option>
+				<option>Australia</option>
+				<option>Canada</option>
+			</select> <span id="output">
+                  <!-- resultant tobeadded here -->
+               </span>
+			<span id="output2">
+                  <!-- resultant tobeadded here -->
+               </span>
+			<label id="dropdownmessage"></label>
+			<br>
+			<br>
+			<input type="submit" value="Submit" class="btn btn-primary" id="submit">
+			<!-- <input type="button" value="LoadDefaultUserData" class="btn btn-primary" onclick="loadDefaultUserData()"> -->
+			<!-- <input type="reset" name=""> -->
+			<div class="text-center">
+				<br>
+				<p class="bottom-text">By clicking the Sign Up button, you agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+				</p>
+			</div>
+	</form>
+	<h4 id="usercreate" class="text-center" style="font-family: monospace;">Please create new user</h4>	
+	<div class="form-row">
+		<div class="form-group col-lg-12">
+	<table class="table" class="users-detail table-striped">
+		<tr>
+			<th>ID</th>
+			<th>FirstName</th>
+			<th>LastName</th>
+			<th>EmailId</th>
+			<th>ContactNo.</th>
+			<th>City</th>
+			<th>Action</th>
+		</tr>
+	</table>
+	</div>
+	</div>
+	<div class="container-sm text-center">
+		<footer>
+			<p>Already have an account? <a href="#">Login Here</a>
+			</p>
+			<p class="colorpicker">Pick Your color:
+				<input type="color" id="colorpick" name="colorpicker">
+				<!-- <input type="submit" class="submitbtn" value="submit" onclick="colorPicker();"><br><br> -->
+				<input type="submit" class="submitbtn" name="" value="Refresh" onclick="reloadPage();">
+			</p>
+		</footer>
+	</div>
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script src="windowFunctions.js"></script>
+	<script src="variableObject.js"></script>
+	<script src="selectorsAndRegex.js"></script>
+	<script src="updateAndDelete.js"></script>
+	<script src="createTableData.js"></script>
+	<script src="regiondropdown.js"></script>
+	<script src="registrationFormValidation.js"></script>
+	<script src="events.js"></script>
+</body>
+
+</html>
