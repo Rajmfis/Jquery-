@@ -1,3 +1,6 @@
+
+
+
 /**
  * This is a function which is being called when the 
  * document is loaded on the browser. The validations are 
@@ -6,6 +9,9 @@
  */
 (function() {
   // 
+  $('[data-toggle="popover"]').popover(); 
+  $('[data-toggle="tooltip"]').tooltip();
+
   //the function validates the email fields
   jQuery.validator.addMethod("customEmail", function(value, element) {
    return this.optional(element) || /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
@@ -14,6 +20,25 @@
    return this.optional(element) || /^([0-9]{10,11})+$/.test(value);
   }, "Please enter valid phone number!");
   var registerForm = $("#form");
+  var subscribeMail=$("#subscription-mail");
+  subscribeMail.validate({
+    onkeyup: function(element) {
+      $(element).valid()
+     },
+     rules:{
+      email: {
+        required: true,
+        customEmail: true
+       },
+     },
+     messages:{
+      email: {
+        required: 'Please enter email!',
+        email: 'Please enter valid email!'
+       },
+     }
+  });
+
   // if(firstname&&lastname&&password&&inputEmail&&phone){
   registerForm.validate({
    onkeyup: function(element) {
@@ -99,3 +124,13 @@
   xhr.send();
  })();
  
+ function emailSubscribe(){
+
+    if($('#subsmail').val()===''){
+      alert('Please enter your email id');
+    }
+    alert($('#subsmail').val());
+    // document.getElementById('subscription-mail').reset();
+    
+    // return false;
+ }

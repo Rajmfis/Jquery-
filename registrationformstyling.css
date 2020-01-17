@@ -2,6 +2,15 @@
   /* font-size:1vw; */
   /* font-family: Raleway; */
 /* } */ 
+/* body{
+  background-image: image('logo4.webp');
+} */
+/* form{
+  color:rgba(236, 86, 169, 0.993);
+} */
+.details{
+  padding-top: 15px;
+}
 .error:not(#dropdown) {/*excluding the id dropdown from coloring it as red*/
   color: red;
 }

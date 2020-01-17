@@ -82,14 +82,14 @@
    id = oldId + 1;
    map.set(firstname, obj);
   //  console.log(map);
-   Swal.fire({
-    position: 'center',
-    icon: 'success',
-    title: 'Your data loaded into the table',
-    showConfirmButton: false,
-    width: '800px',
-    timer: 1500
-   })
+  //  Swal.fire({
+  //   position: 'center',
+  //   icon: 'success',
+  //   title: 'Your data loaded into the table',
+  //   showConfirmButton: false,
+  //   width: '800px',
+  //   timer: 1500
+  //  })
    obj = {};
   }
 
