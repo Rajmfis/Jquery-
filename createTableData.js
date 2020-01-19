@@ -42,10 +42,10 @@
    $("#states").remove();
    $("#cityname").remove();
  
-   $("#fnamemessage").text("");
-   $("#lnamemessage").text("");
-   $("#emailmessage").text("");
-   $("#contactmessage").text("");
+  //  $("#fnamemessage").text("");
+  //  $("#lnamemessage").text("");
+  //  $("#emailmessage").text("");
+  //  $("#contactmessage").text("");
   }
  
   /**

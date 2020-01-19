@@ -8,6 +8,16 @@
 /* form{
   color:rgba(236, 86, 169, 0.993);
 } */
+li {
+  margin-right: 40px;
+}
+.needmargin{
+  margin-right: 90px;
+}
+.users-detail{
+  table-layout: fixed;
+  word-wrap: break-word;
+}
 .details{
   padding-top: 15px;
 }

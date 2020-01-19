@@ -124,13 +124,17 @@
   xhr.send();
  })();
  
- function emailSubscribe(){
+ //adding events in js is removing the message. try to find out ?????
+ $('#subscription-mail').submit(function emailSubscribe(e){
 
-    if($('#subsmail').val()===''){
-      alert('Please enter your email id');
-    }
-    alert($('#subsmail').val());
-    // document.getElementById('subscription-mail').reset();
-    
-    // return false;
+  if($('#subsmail').val()===''){
+   alert('Please enter your email id');
+  }
+
+  clearSubscriptionInput();
+  e.preventDefault();
+ });
+
+ function clearSubscriptionInput(){
+  $('#subsmail').val('');
  }

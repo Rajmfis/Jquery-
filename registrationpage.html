@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="registrationformstyling.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
@@ -16,25 +17,40 @@
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #68a5d1;">
-		<!-- <nav class="navbar  navbar-light bg-light" > --> <a class="navbar-brand" href="#">Grab Coupon</a>
+	 <a class="navbar-brand" href="#" style="font-family: 'Courgette', cursive;
+	 ;font-size: xx-large;">Grab Coupon</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarText">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"> <a class="nav-link" href="#">Home</a>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"> <a class="nav-link" href="#"><span style="color:whitesmoke;font-size: x-large;">Home</span></a>
 				</li>
-				<li class="nav-item"> <a class="nav-link" data-toggle="modal" data-target="#myModal" href="#">Pricing</a> 
+				<li class="nav-item"> <a class="nav-link" data-toggle="modal" data-target="#myModal" href="#" style="color:whitesmoke;font-size: x-large;">Subscribed Users</a> 
 					<!-- The Modal -->
-					<div class="modal" id="myModal">
-						<div class="modal-dialog">
+					<div class="modal " id="myModal">
+						<div class="modal-dialog modal-xl">
 							<div class="modal-content">
 								<!-- Modal Header -->
 								<div class="modal-header">
-									<h4 class="modal-title">Pricing</h4>
+									<p class="modal-title" style="font-family: 'Montserrat', sans-serif;font-size: x-large;">User List</h4>
 									<button type="button" class="close" data-dismiss="modal">&times;</button>
 								</div>
 								<!-- Modal body -->
-								<div class="modal-body">We will very soon come up with the <strong>10</strong><i class="fas fa-dollar-sign"> </i> pricing offer. As if now you can subscribe freely </i></div>
+								<div class="modal-body">		<div class="form-row">
+									<div class="form-group col-lg-12">
+								<table class="table users-detail table-striped">
+									<tr >
+										<th scope="col">ID</th>
+										<th scope="col">FirstName</th>
+										<th scope="col">LastName</th>
+										<th scope="col">EmailId</th>
+										<th scope="col">ContactNo.</th>
+										<th scope="col">City</th>
+										<th scope="col">Action</th>
+									</tr>
+								</table>
+								</div>
+								</div></div>
 								<!-- Modal footer -->
 								<div class="modal-footer">
 									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -43,31 +59,27 @@
 						</div>
 					</div>
 				</li>
-				<li class="nav-item active"> <a class="nav-link" href="#">Subscription</a>
+				<li class="nav-item needmargin"> <a class="nav-link" href="#"><span style="color:whitesmoke;font-size:x-large;">Subscription</span></a>
 				</li>
 			</ul>
 		</div>
 	</nav>
-	<div class="card-group order-2">
+	<div class="card-group row">
 		<div class="card details " style="background-image: url('logo4.webp'); background-position:center bottom;">
-			<div class="accordion" id="accordionExample">
-				<div class="card ">
-					<div class="card-header" id="headingOne" style="background-image: url('logo4.webp'); background-position:center bottom;">
-						<h2 class="mb-0">
-							<button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-								About us
-							</button>
-							<a tabindex="0" class="btn btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Total Coupons Sold" data-content="As of now we have sold coupons worth 284 crores USD ">Click to see total Coupons Sold</a>
-						</h2>
-					</div>
-					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-						<div class="card-body" style="background-image: url('logo4.webp'); background-position:center bottom;">
-							<p class="card-text" style="font-family: 'Montserrat', sans-serif;
-									font-size:larger;color:mintcream;">Grab Coupon is a service that can save you money through the use of virtual coupons. Much like a physical coupon book, you can use Groupon to get deals of up to 80 percent off of all sorts of things, from food and retail products to travel and services. You can use Groupon on a computer and from a phone or tablet.</p>
-						</div>
-					</div>
+			<nav>
+				<div class="nav nav-tabs" id="nav-tab" role="tablist">
+					<a class="nav-item nav-link active" style="color:rgb(220, 228, 224);" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><p style="font-family: 'Montserrat', sans-serif; font-size:x-large; color:paleturquoise;text-align: center;">About us</p></a>
+					<a class="nav-item nav-link btn-seconday" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><p style="font-family: 'Montserrat', sans-serif; font-size:x-large; color:paleturquoise;text-align: center;">Total Coupon Sold</p></a>
 				</div>
+			</nav><br>
+			<div class="tab-content" id="nav-tabContent">
+				<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><p  style="font-family: 'Montserrat', sans-serif;
+					font-size:larger;color:mintcream;">Grab Coupon is a service that can save you money through the use of virtual coupons. Much like a physical coupon book, you can use Groupon to get deals of up to 80 percent off of all sorts of things, from food and retail products to travel and services. You can use Groupon on a computer and from a phone or tablet.</p></div>
+				<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+				<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><p  style="font-family: 'Montserrat', sans-serif;
+					font-size:larger;color:mintcream;">As of now we have sold coupons worth 284 crores USD. From January 2010 through January 2011, Groupon's U.S. monthly revenues grew from $11 million to $89 million. Consolidated revenue for the full year 2014 reached nearly $3.2 billion. Groupon's consolidated gross billings for the full year 2014 increased 32% year-over-year to $7.6 billion. </p></div>
 			</div>
+
 		</div>
 		
 		<div class="card">
@@ -112,8 +124,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-row">
-						<div class="form-group col-lg-12">
+					<div class="form-row row">
+						<div class="form-group col-sm-12">
 							<div id="contact">
 								<label for="contact" class="required font-weight-bold">Contact No.</label>
 								<br>
@@ -166,45 +178,25 @@
 					</p>
 					<p class="colorpicker">Pick Your color:
 						<input type="color" id="colorpick" name="colorpicker">
-						<!-- <input type="submit" class="submitbtn" value="submit" onclick="colorPicker();"><br><br> -->
 						<input type="submit" class="submitbtn" name="" value="Refresh" onclick="reloadPage();">
 					</p>
 				</footer>
 			</div>
-		<!-- </div> -->
 			</div>
-			<!-- <div class="form-row">
-				<div class="form-group col-lg-12">
-			<table class="table" class="users-detail table-striped">
-				<tr >
-					<th scope="col">ID</th>
-					<th scope="col">FirstName</th>
-					<th scope="col">LastName</th>
-					<th scope="col">EmailId</th>
-					<th scope="col">ContactNo.</th>
-					<th scope="col">City</th>
-					<th scope="col">Action</th>
-				</tr>
-			</table>
-			</div>
-			</div> -->
 		</div>
 
-
-	<div class="card " style="background-image: url('gmail.jpg');   background-size: cover;
+	<div class="card" style="background-image: url('gmail.jpg');   background-size: cover;
 	background-repeat: no-repeat; color: rgba(236, 86, 169, 0.993);padding-top: 200px;">
-		<!-- <img alt="Photo" class="card-img-top"> -->
-		<div class="card-body text-center order-0">
-		 <form id="subscription-mail" onsubmit="emailSubscribe();">	
+		<div class="card-body text-center ">
+		 <form id="subscription-mail">	
 			<h5 class="card-title " style="font-size: 35px;">Want to get notified for the updates</h5>
 			<p class="card-text" style="font-size: 25px;">Subscribe to our daily mail list</p>
 			<input type="text" name="email" id="subsmail" placeholder="example@gmail.com" class="form-control " ><br>
-			<button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Get 2 free coupons now">
+			<!-- <button type="submit" onclick="emailSubscribe();" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Get 2 free coupons now">
 				Submit
-			</button>
-			<!-- <input type="submit" class="btn btn-primary"> -->
+			</button> -->
+			<input type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Get 2 free coupons now">
 		 </form>
-		 <div id="message"></div>
 		</div>
 	</div>
 </div>
