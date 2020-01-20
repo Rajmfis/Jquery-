@@ -1,18 +1,18 @@
-/* *{
-  /* font-size:1vw; */
-  /* font-family: Raleway; */
-/* } */ 
-/* body{
-  background-image: image('logo4.webp');
-} */
-/* form{
-  color:rgba(236, 86, 169, 0.993);
-} */
-li {
-  margin-right: 40px;
+@media only screen and (max-width: 400px) {
+	#first-card {
+		order: 3;
+  }
+  #second-card {
+		order: 2;
+  }
+	#third-card {
+		order: 1;
+	}
 }
-.needmargin{
-  margin-right: 90px;
+/*	On mobile, show right one on top , middle one below that and then left one at bottom. (reverse order) */
+li:not(.needmargin){
+  margin-right: 40px;
+  padding: 0px 0px;
 }
 .users-detail{
   table-layout: fixed;

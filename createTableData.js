@@ -74,7 +74,7 @@
    }
  
    var row = "<tr id=\"data\"><td>" + id + "</td><td>" +
-    firstname + "</td><td>" + lastname + "</td><td>" + inputEmail + "</td><td>" + phone + "</td><td>" + city + "</td><td>" + "<button onclick=\"deleteUser(this);\">&#9747;</button> <button onclick=\"editUser(this);\">&#9745;</button>" + "</td></tr>";
+    firstname + "</td><td>" + lastname + "</td><td>" + inputEmail + "</td><td>" + phone + "</td><td>" + city + "</td><td>" + "<button onclick=\"deleteUser(this);\"><i class=\"far fa-trash-alt\"></i></button> <button onclick=\"editUser(this);\"><i class=\"fas fa-edit\"></i></button>" + "</td></tr>";
    mytable.append(row); //append method is used with jquery for table
   //  alert('in the edit function');
    $("#submit").val("Submit");

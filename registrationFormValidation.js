@@ -128,13 +128,23 @@
  $('#subscription-mail').submit(function emailSubscribe(e){
 
   if($('#subsmail').val()===''){
-   alert('Please enter your email id');
+  //  alert('Please enter your email id');
   }
-
-  clearSubscriptionInput();
+  clearSubscriptionInput($('#subsmail').val());
   e.preventDefault();
  });
 
- function clearSubscriptionInput(){
+ function clearSubscriptionInput(inputEmail){
+
+  myFunction();
   $('#subsmail').val('');
+ }
+
+ function myFunction() {
+  var form = $("#subscription-mail");
+  var originalContent = form.html();
+  form.html("<h3>Please click on the link sent to your mail and Confirm</h3>");
+  setTimeout(function() {
+    form.html(originalContent);
+  }, 5000);
  }
