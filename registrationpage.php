@@ -83,16 +83,15 @@
 				<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><p  style="font-family: 'Montserrat', sans-serif;
 					font-size:larger;color:mintcream;">As of now we have sold coupons worth 284 crores USD. From January 2010 through January 2011, Groupon's U.S. monthly revenues grew from $11 million to $89 million. Consolidated revenue for the full year 2014 reached nearly $3.2 billion. Groupon's consolidated gross billings for the full year 2014 increased 32% year-over-year to $7.6 billion. </p></div>
 			</div>
-
 		</div>
 		
 		<div class="card col-md" id="second-card">
 			<!-- <img  class="card-img-top" alt="Photo"> -->
 			<div class="card-body" >
 				<!-- <div class="form-content">  -->
-				<form id="form" method="post" name="myform">
+				<form action="dbconnect.php" method="post" id="form" name="myform">
 					<div class="form-row">
-						<div class="form-group col-lg-12">	<span class="text-center"> 
+						<div class="form-group col-lg-12"> <span class="text-center"> 
 							<h4 class="card-title">Subscribe and Never Miss any Coupon</h4>
 							<p class="card-text">It's free and only takes a minute</p>
 						</span>
@@ -280,7 +279,7 @@
 	<script src="variableObject.js"></script>
 	<script src="selectorsAndRegex.js"></script>
 	<script src="updateAndDelete.js"></script>
-	<script src="createTableData.js"></script>
+	<script src="createTableData.js?v=<?php echo time(); ?>"></script>
 	<script src="regiondropdown.js"></script>
 	<script src="registrationFormValidation.js"></script>
 	<script src="events.js"></script>

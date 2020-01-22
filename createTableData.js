@@ -19,7 +19,6 @@
    if (inputEmail && phone && firstname && lastname && password) {
     createTable(firstname, lastname, inputEmail, phone);
     resetForm();
-    return false;
    }
   }
  
