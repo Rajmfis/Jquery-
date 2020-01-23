@@ -1,12 +1,11 @@
 <?php session_start();
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "raj", "Raj@199704", "couponusers");
+include "dbutil.php";
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-
 
 // Attempt select query execution
 if($_SESSION["searchid"]){
@@ -38,7 +37,7 @@ mysqli_close($link);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="profileStyling.css">
+    <link rel="stylesheet" href="assets/css/profileStyling.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title><?php echo $fname ;?>'s Profile</title>
 </head>
@@ -56,7 +55,7 @@ mysqli_close($link);
                 </li>
 				<li class="nav-item needmargin"> 
         <!-- onclick="sessionDestroy.php" -->
-          <a class="nav-link" href="registrationpage.php" >
+          <a class="nav-link" href="register.php" >
             <span style="color:whitesmoke;font-size:x-large;">LogOut</span></a>
         </li>                
 			</ul>

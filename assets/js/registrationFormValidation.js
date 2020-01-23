@@ -94,7 +94,7 @@
   });
  
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", "userjsondata.json", true);
+  xhr.open("GET", "../jsonfile/userjsondata.json", true);
   xhr.onload = function() {
    if (this.status === 200) {
     // console.log(this.responseText);

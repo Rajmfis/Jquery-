@@ -3,7 +3,7 @@
   
   $_SESSION["searchid"] = "$id";
   $_SESSION["username"]="";
-  header("Location: my_profile.php");
+  header("Location: user profile.php");
   // echo $_SESSION["username"];
   // json_encode(array('success' => 1));
 ?>

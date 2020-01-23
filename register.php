@@ -9,7 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="registrationformstyling.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/registrationformstyling.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -32,21 +32,20 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Enter your id</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-			 <form action="userlogin.php" method="post" id="userdetails" onsubmit="fetchname(e);">
-				<label>Enter firstname: <input type="text" class="form-control" name="userid"></label>
+			 <form action="logging page.php" method="post" id="userdetails" onsubmit="fetchname(e);">
+				<label><input type="text" class="form-control" name="userid"></label>
 				<input type="submit" class="btn btn-primary" >
        </form>
       </div>
     </div>
   </div>
 </div>
-
 				</li>				
 				</li>
 			</ul>
@@ -57,7 +56,7 @@
 	
  <div class="ordering">
 	<div class="card-group row">
-		<div class="card details  col-md" id="first-card" style="background-image: url('logo4.webp'); background-position:center bottom;">
+		<div class="card details  col-md" id="first-card" style="background-image: url('assets/images/logo4.webp'); background-position:center bottom;">
 			<nav>
 				<div class="nav nav-tabs" id="nav-tab" role="tablist">
 					<a class="nav-item nav-link active" style="color:rgb(88, 199, 143);" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><p style="font-family: 'Anton', sans-serif;	font-size:xx-large; color:rgba(230, 226, 17, 0.993);text-align: center;">About us</p></a>
@@ -175,7 +174,7 @@
 			</div>
 			</div>
 		</div>
-	<div class="card col-md" id="third-card" style="background-image: url('gmail.jpg');   background-size: cover;
+	<div class="card col-md" id="third-card" style="background-image: url('assets/images/gmail.jpg');   background-size: cover;
 	background-repeat: no-repeat; color: rgba(236, 86, 169, 0.993);padding-top: 200px;">
 		<div class="card-body text-center">
 		 <form id="subscription-mail">	
@@ -211,13 +210,13 @@
 			<h6 class="card-title" style="font-size: xx-large;">And get exciting Deals like below</h6>
 			<div class="carousel-inner">
 				<div class="carousel-item active " >
-					<img src="deal4.jpg" height="400px" class="d-block w-100" alt="Previous Deals">
+					<img src="assets/images/deal4.jpg" height="400px" class="d-block w-100" alt="Previous Deals">
 				</div>
 				<div class="carousel-item">
-					<img src="deal2.jpg" height="400px" class="d-block w-100" alt="Previous Deals">
+					<img src="assets/images/deal2.jpg" height="400px" class="d-block w-100" alt="Previous Deals">
 				</div>
 				<div class="carousel-item">
-					<img src="deal3.jpg" height="400px" class="d-block w-100" alt="Previous Deals">
+					<img src="assets/images/deal3.jpg" height="400px" class="d-block w-100" alt="Previous Deals">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -239,8 +238,7 @@
 		</p>
 		<div class="embed-responsive embed-responsive-16by9">
 			<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.8049409986284!2d76.7661648146105!3d30.723883593111207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedadf8b3ec0f%3A0xdc97839385d14a05!2sGroupon%20India!5e0!3m2!1sen!2sin!4v1579506180755!5m2!1sen!2sin" width="700" height="400" frameborder="0"  style="border:0;" allowfullscreen=""></iframe>
-		</div>
-		
+		</div>		
 	 </div>
  </div>
 </div>
@@ -263,13 +261,13 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-	<script src="windowFunctions.js"></script>
-	<script src="variableObject.js"></script>
-	<script src="selectorsAndRegex.js"></script>
-	<script src="updateAndDelete.js"></script>
-	<script src="createTableData.js?v=<?php echo time(); ?>"></script>
-	<script src="regiondropdown.js"></script>
-	<script src="registrationFormValidation.js"></script>
+	<script src="assets/js/windowFunctions.js"></script>
+	<script src="assets/js/variableObject.js"></script>
+	<script src="assets/js/selectorsAndRegex.js"></script>
+	<script src="assets/js/updateAndDelete.js"></script>
+	<script src="createTableData.js"></script>
+	<script src="assets/js/regiondropdown.js"></script>
+	<script src="assets/js/registrationFormValidation.js"></script>
 	<script src="events.js"></script>
 </body>
 

@@ -1,8 +1,7 @@
 <?php session_start();
-
+include "dbutil.php";
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "raj", "Raj@199704", "couponusers");
  
 // Check connection
 if($link === false){
@@ -24,10 +23,7 @@ $sql = "INSERT INTO users (first_name,last_name,email_id,contact_no) VALUES ('$f
 if(mysqli_query($link, $sql)){
     json_encode(array('success' => 1));   
     // echo "Records added successfully.";
-} else{
-    // echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-    // echo json_encode(array('success' => 0));
-}
+} 
  
 // close connection
 mysqli_close($link);

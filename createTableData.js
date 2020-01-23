@@ -16,17 +16,14 @@
       data: $(this).serialize(),
       success: function(data)
       {
-        
-          if (!data.status)
-          {
-              location.href = 'my_profile.php';
-          }
-          else
-          {
-              alert('Invalid Credentials!');
-          }
-     }
- });
+        if (!data.status)
+        {
+          location.href = 'user profile.php';
+        }else{
+          alert('Invalid Credentials!');
+        }
+      }
+    });
   }
  
   function fetchname(event){
@@ -35,18 +32,18 @@
     // location.href = 'my_profile.php';
       $.ajax({
         type: "POST",
-        url: 'userlogin.php',
+        url: 'logging page.php',
         data: $(this).serialize(),
         success: function(data)
         {
           if (!data.status)
           {
-            location.href = 'my_profile.php';
+            location.href = 'user profile.php';
           }else
           {
             alert('Invalid Credentials!');
           }
-       }
+        }
    });
   }
 
