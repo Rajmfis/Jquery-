@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>Coupon Website</title>
   <meta charset="UTF-8">
@@ -14,11 +13,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #68a5d1;">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #68a5d1;">
 	 <a class="navbar-brand" href="#" style="font-family: 'Courgette', cursive;
 	 ;font-size: xx-large;">Grab Coupon</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
@@ -27,45 +25,35 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"> <a class="nav-link" href="#"><span style="color:whitesmoke;font-size: x-large;">Home</span></a>
 				</li>
-				<li class="nav-item"> <a class="nav-link" data-toggle="modal" data-target="#myModal" href="#" style="color:whitesmoke;font-size: x-large;">Subscribed Users</a> 
-					<!-- The Modal -->
-					<div class="modal " id="myModal">
-						<div class="modal-dialog modal-xl">
-							<div class="modal-content">
-								<!-- Modal Header -->
-								<div class="modal-header">
-									<p class="modal-title" style="font-family: 'Montserrat', sans-serif;font-size: x-large;">User List</h4>
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-								</div>
-								<!-- Modal body -->
-								<div class="modal-body">		<div class="form-row">
-									<div class="form-group col-lg-12">
-								<table class="table users-detail table-striped">
-									<tr >
-										<th scope="col">ID</th>
-										<th scope="col">FirstName</th>
-										<th scope="col">LastName</th>
-										<th scope="col">EmailId</th>
-										<th scope="col">ContactNo.</th>
-										<th scope="col">City</th>
-										<th scope="col">Action</th>
-									</tr>
-								</table>
-								</div>
-								</div></div>
-								<!-- Modal footer -->
-								<div class="modal-footer">
-									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
 				<li class="nav-item needmargin"> <a class="nav-link" href="#"><span style="color:whitesmoke;font-size:x-large;">Subscription</span></a>
+				<li class="nav-item"> <a class="nav-link"  data-toggle="modal" data-target="#exampleModal" href="#"><span style="color:whitesmoke;font-size: x-large;">Login</span></a>
+<!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+			 <form action="userlogin.php" method="post" id="userdetails" onsubmit="fetchname(e);">
+				<label>Enter firstname: <input type="text" class="form-control" name="userid"></label>
+				<input type="submit" class="btn btn-primary" >
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+				</li>				
 				</li>
 			</ul>
 		</div>
 	</nav>
+
+
 	
  <div class="ordering">
 	<div class="card-group row">

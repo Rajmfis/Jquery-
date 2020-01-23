@@ -1,0 +1,11 @@
+li:not(.needmargin){
+  margin-right: 40px;
+  padding: 0px 0px;
+}
+.profile-info{
+  font-family: 'Titillium Web', sans-serif;
+}
+.card-title{
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -7,21 +7,49 @@
    * there is a method called to store all the inputs in a table "createTable()"
    * "resetForm()" is called to clear all the input fields 
    */
-  function submitAction() {
-   var inputEmail = $("#emailId").val(); //picking the email field value
-   var phone = $("#contactno").val();
-   var firstname = $("#firstname").val();
-   username = firstname;
-   var lastname = $("#lastname").val();
-   var password = $("#pwd").val();
- 
-   // alert(inputEmail+phone+firstname+lastname+password);
-   if (inputEmail && phone && firstname && lastname && password) {
-    createTable(firstname, lastname, inputEmail, phone);
-    resetForm();
-   }
+  function submitAction(event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    $.ajax({
+      type: "POST",
+      url: 'dbconnect.php',
+      data: $(this).serialize(),
+      success: function(data)
+      {
+        
+          if (!data.status)
+          {
+              location.href = 'my_profile.php';
+          }
+          else
+          {
+              alert('Invalid Credentials!');
+          }
+     }
+ });
   }
  
+  function fetchname(event){
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    // location.href = 'my_profile.php';
+      $.ajax({
+        type: "POST",
+        url: 'userlogin.php',
+        data: $(this).serialize(),
+        success: function(data)
+        {
+          if (!data.status)
+          {
+            location.href = 'my_profile.php';
+          }else
+          {
+            alert('Invalid Credentials!');
+          }
+       }
+   });
+  }
+
   function changeBackgroundColor() {
    $("body").css("background-color", $("#colorpick").val());
   } 
@@ -96,6 +124,7 @@
    formsubmit: submitAction,
    backgroundColor: changeBackgroundColor,
    createrowdata:createTable,
+   fetchdetails:fetchname,
   }
  })();
  
