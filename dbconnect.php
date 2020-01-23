@@ -1,7 +1,5 @@
 <?php session_start();
 include "dbutil.php";
-/* Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
  
 // Check connection
 if($link === false){
@@ -24,7 +22,7 @@ if(mysqli_query($link, $sql)){
     json_encode(array('success' => 1));   
     // echo "Records added successfully.";
 } 
- 
+
 // close connection
 mysqli_close($link);
 ?>

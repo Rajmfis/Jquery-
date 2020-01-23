@@ -9,7 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/registrationformstyling.css">
+	<link rel="stylesheet" type="text/css" href="css/registrationformstyling.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -261,13 +261,13 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-	<script src="assets/js/windowFunctions.js"></script>
-	<script src="assets/js/variableObject.js"></script>
-	<script src="assets/js/selectorsAndRegex.js"></script>
-	<script src="assets/js/updateAndDelete.js"></script>
+	<script src="js/windowFunctions.js"></script>
+	<script src="js/variableObject.js"></script>
+	<script src="js/selectorsAndRegex.js"></script>
+	<script src="js/updateAndDelete.js"></script>
 	<script src="createTableData.js"></script>
-	<script src="assets/js/regiondropdown.js"></script>
-	<script src="assets/js/registrationFormValidation.js"></script>
+	<script src="js/regiondropdown.js"></script>
+	<script src="js/registrationFormValidation.js"></script>
 	<script src="events.js"></script>
 </body>
 
