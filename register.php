@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #68a5d1;">
 	 <a class="navbar-brand" href="#" style="font-family: 'Courgette', cursive;
-	 ;font-size: xx-large;">Grab Coupon</a>
+	 ;font-size: xx-large;color:white">Grab Coupon</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarText">
@@ -53,12 +54,10 @@
 			</ul>
 		</div>
 	</nav>
-
-
 	
  <div class="ordering">
 	<div class="card-group row">
-		<div class="card details  col-md" id="first-card" style="background-image: url('assets/images/logo4.webp'); background-position:center bottom;">
+		<div class="card details  col-md" id="first-card" style="background-image: url('assets/images/logo4.webp'); background-position:center bottom;border-color: #05ffb0;">
 			<nav>
 				<div class="nav nav-tabs" id="nav-tab" role="tablist">
 					<a class="nav-item nav-link active" style="color:rgb(88, 199, 143);" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><p style="font-family: 'Anton', sans-serif;	font-size:xx-large; color:rgba(230, 226, 17, 0.993);text-align: center;">About us</p></a>
@@ -74,7 +73,7 @@
 			</div>
 		</div>
 		
-		<div class="card col-md" id="second-card">
+		<div class="card col-md" id="second-card" style="border-color: #05ffb0;">
 			<!-- <img  class="card-img-top" alt="Photo"> -->
 			<div class="card-body" >
 				<!-- <div class="form-content">  -->
@@ -177,7 +176,7 @@
 			</div>
 		</div>
 	<div class="card col-md" id="third-card" style="background-image: url('assets/images/gmail.jpg');   background-size: cover;
-	background-repeat: no-repeat; color: rgba(236, 86, 169, 0.993);padding-top: 200px;">
+	background-repeat: no-repeat; color: rgba(236, 86, 169, 0.993);padding-top: 200px;border-color: #05ffb0;">
 		<div class="card-body text-center">
 		 <form id="subscription-mail">	
 			<h5 class="card-title " style="font-size: 35px;">Want to get notified for the updates</h5>
@@ -212,13 +211,13 @@
 			<h6 class="card-title" style="font-size: xx-large;">And get exciting Deals like below</h6>
 			<div class="carousel-inner">
 				<div class="carousel-item active " >
-					<img src="assets/images/deal4.jpg" height="400px" class="d-block w-100" alt="Previous Deals">
+					<img src="assets/images/deal4.jpg" height="400px" class="" alt="Previous Deals">
 				</div>
 				<div class="carousel-item">
-					<img src="assets/images/deal2.jpg" height="400px" class="d-block w-100" alt="Previous Deals">
+					<img src="assets/images/deal2.jpg" height="400px" class="" alt="Previous Deals">
 				</div>
 				<div class="carousel-item">
-					<img src="assets/images/deal3.jpg" height="400px" class="d-block w-100" alt="Previous Deals">
+					<img src="assets/images/deal3.jpg" height="400px" class="" alt="Previous Deals">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -232,22 +231,73 @@
 		</div>
 	 </div>
   </div>
-	<div class="card">
-	 <div class="card-body ">
+</div>
+<div style="font-family: 'Fjalla One', sans-serif;
+">
+<div class="card-group " >
+<div class="card container" style="background-color:#ccffff;border-color: #05ffb0;">
+	 <div class="card-body">
+	 <form>
+	 <p><u style="font-size:x-large;">Contact Us</u></p><br>
+  <div class="form-row">
+		
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+	 </div>
+ </div>
+
+ <div class="card" style="background-color:#e0ebeb;">
+	 <div class="card-body " style="border-color: #05ffb0;">
 		<h4>We are located at</h4>
-    <p class="card-text">
+      <p class="card-text">
 			SCO No. 364-65-66, 3rd Floor, Sec - 34A, Chandigarh, Sector 34A, Chandigarh, 160022, PQF9H8 Sector 34, Chandigarh
 		</p>
 		<div class="embed-responsive embed-responsive-16by9">
-			<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.8049409986284!2d76.7661648146105!3d30.723883593111207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedadf8b3ec0f%3A0xdc97839385d14a05!2sGroupon%20India!5e0!3m2!1sen!2sin!4v1579506180755!5m2!1sen!2sin" width="700" height="400" frameborder="0"  style="border:0;" allowfullscreen=""></iframe>
+			<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.8049409986284!2d76.7661648146105!3d30.723883593111207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedadf8b3ec0f%3A0xdc97839385d14a05!2sGroupon%20India!5e0!3m2!1sen!2sin!4v1579506180755!5m2!1sen!2sin" width="100" height="100" frameborder="0"  style="border:0;" allowfullscreen=""></iframe>
 		</div>		
 	 </div>
  </div>
-</div>
+ 
+ </div>
+ </div>
 
-<div class="card-group"> 
+<div class="card-group" style="border-color: #68a5d1;"> 
  <div class="card ">
-	<div class="card-body" style="background-color:hsl(182, 52%, 68%);">
+	<div class="card-body" style="background-color: #68a5d1;">
    <!-- <div class="card-footer"> -->
 	  <h4 style="text-align: center;padding-top: 10px;color: white;">We would love to hear feedback on : <a href="#"><u>feedback@grabcoupon.com</u></a></h4>
 	  <p style="font-family: 'Alata', sans-serif;

@@ -12,7 +12,7 @@ include "dbutil.php";
   $checkuser="SELECT * FROM users WHERE ID = '".$_SESSION['searchid']."'";
   $sql= "SELECT * FROM users WHERE ID = '".$_SESSION['searchid']."' AND  PWD ='$password'";
   // $sql="SELECT * FROM rere where ID = '" . $_SESSION['searchid'] . "'"; request fails here as query error occurred
-//"SELECT * FROM users where ID = '" . $_SESSION['searchid'] . "'";
+ //"SELECT * FROM users where ID = '" . $_SESSION['searchid'] . "'";
   $userexist=mysqli_query($link, $checkuser);
   $checkresult=mysqli_num_rows($userexist);
 
