@@ -5,6 +5,7 @@ include "dbutil.php";
 
 if(!isset($_SERVER['HTTP_REFERER'])){
   // redirect them to your desired location
+  session_destroy();
   header('location:register.php');
   exit;
 }
@@ -16,7 +17,7 @@ if($link === false){
 
 // Attempt select query execution
 if($_SESSION["searchid"]){
-  $sql="SELECT * FROM USERS where ID = '" . $_SESSION['searchid'] . "'";
+  $sql= "SELECT * FROM users WHERE ID = '".$_SESSION['searchid']."' AND  PWD ='".$_SESSION['searchpwd']."'";
 }else{
  $sql="SELECT * FROM USERS where FIRST_NAME = '" . $_SESSION['username'] . "'";
 }
@@ -34,6 +35,7 @@ if($result = mysqli_query($link, $sql)){
     }
 }
 
+session_destroy();
 mysqli_close($link);
 
 ?>

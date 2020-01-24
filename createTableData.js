@@ -12,38 +12,45 @@
     event.stopImmediatePropagation();
     $.ajax({
       type: "POST",
-      url: 'dbconnect.php',
+      url: 'userpage.php',
       data: $(this).serialize(),
-      success: function(data)
-      {
-        if (!data.status)
-        {
+      success: function(response){
+        var jsonData = JSON.parse(response);
+        if(jsonData.success === 1){
           location.href = 'user profile.php';
         }else{
-          alert('Invalid Credentials!');
+          alert("unable to create profile.Please try after sometime");
+          location.href ='register.php';
         }
       }
     });
   }
- 
+
   function fetchname(event){
     event.preventDefault();
     event.stopImmediatePropagation();
-    // location.href = 'my_profile.php';
       $.ajax({
         type: "POST",
+        // contentType: "application/json;charset=utf-8",
+        // dataType: "json",
         url: 'logging page.php',
         data: $(this).serialize(),
-        success: function(data)
-        {
-          if (!data.status)
-          {
-            location.href = 'user profile.php';
-          }else
-          {
-            alert('Invalid Credentials!');
+        success: function(response){
+          try {
+            var jsonData = JSON.parse(response);
+            if (jsonData.success === 1){
+              location.href = 'user profile.php';
+            }else if(jsonData.success === -1){
+              $(".invalidId").text("Seems like you are not registered with us. Kindly register yourself");
+            }else{
+              $(".invalidId").text("Invalid Credentials");
+            }
+          }catch (error) {
+            alert("Error occurred while parsing json, redirecting to the home page");
+            location.href = 'register.php';
           }
         }
+        // error: function(ts) { alert('unable to parse') ;}
    });
   }
 

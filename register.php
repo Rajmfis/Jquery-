@@ -32,16 +32,18 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Enter your id</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Enter your id and password</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-			 <form action="logging page.php" method="post" id="userdetails" onsubmit="fetchname(e);">
-				<label><input type="text" class="form-control" name="userid"></label>
+			 <form method="post" id="userdetails">
+				<label>ID: <input type="text" class="form-control" name="userid" required></label>
+				<label>Password: <input type="password" class="form-control" name="pwd" required></label>
 				<input type="submit" class="btn btn-primary" >
        </form>
+			 <p class="invalidId" style="color:red;"></p>
       </div>
     </div>
   </div>
@@ -76,7 +78,7 @@
 			<!-- <img  class="card-img-top" alt="Photo"> -->
 			<div class="card-body" >
 				<!-- <div class="form-content">  -->
-				<form action="dbconnect.php" method="post" id="form" name="myform">
+				<form action="userpage.php" method="post" id="form" name="myform">
 					<div class="form-row">
 						<div class="form-group col-lg-12"> <span class="text-center"> 
 							<h4 class="card-title">Subscribe and Never Miss any Coupon</h4>
